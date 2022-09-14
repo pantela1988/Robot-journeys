@@ -1,0 +1,15 @@
+C:\Users\Dzo\Desktop\Zadatak\bin\Debug\net6.0\Zadatak.exe
+C:\Users\Dzo\Desktop\Zadatak\bin\Debug\net6.0\Zadatak.deps.json
+C:\Users\Dzo\Desktop\Zadatak\bin\Debug\net6.0\Zadatak.runtimeconfig.json
+C:\Users\Dzo\Desktop\Zadatak\bin\Debug\net6.0\Zadatak.dll
+C:\Users\Dzo\Desktop\Zadatak\bin\Debug\net6.0\Zadatak.pdb
+C:\Users\Dzo\Desktop\Zadatak\obj\Debug\net6.0\Zadatak.csproj.AssemblyReference.cache
+C:\Users\Dzo\Desktop\Zadatak\obj\Debug\net6.0\Zadatak.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dzo\Desktop\Zadatak\obj\Debug\net6.0\Zadatak.AssemblyInfoInputs.cache
+C:\Users\Dzo\Desktop\Zadatak\obj\Debug\net6.0\Zadatak.AssemblyInfo.cs
+C:\Users\Dzo\Desktop\Zadatak\obj\Debug\net6.0\Zadatak.csproj.CoreCompileInputs.cache
+C:\Users\Dzo\Desktop\Zadatak\obj\Debug\net6.0\Zadatak.dll
+C:\Users\Dzo\Desktop\Zadatak\obj\Debug\net6.0\refint\Zadatak.dll
+C:\Users\Dzo\Desktop\Zadatak\obj\Debug\net6.0\Zadatak.pdb
+C:\Users\Dzo\Desktop\Zadatak\obj\Debug\net6.0\Zadatak.genruntimeconfig.cache
+C:\Users\Dzo\Desktop\Zadatak\obj\Debug\net6.0\ref\Zadatak.dll
