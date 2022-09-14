@@ -1,28 +1,28 @@
 class Point
 {
-    public int x;
-    public int y;
-
-    public Direction direction;
+    public int x { get; set; }
+    public int y { get; set; }
+    public Direction Direction;
 
     public Point(int x, int y, char direct)
     {
         this.x = x;
         this.y = y;
+
         direct = Char.ToLower(direct);
         switch (direct)
         {
             case 'n':
-                this.direction = Direction.North;
+                this.Direction = Direction.North;
                 break;
             case 'e':
-                this.direction = Direction.East;
+                this.Direction = Direction.East;
                 break;
             case 's':
-                this.direction = Direction.South;
+                this.Direction = Direction.South;
                 break;
             case 'w':
-                this.direction = Direction.West;
+                this.Direction = Direction.West;
                 break;
             default:
                 throw new CustomException("invalid direction");

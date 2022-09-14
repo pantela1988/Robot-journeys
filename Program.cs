@@ -1,18 +1,24 @@
-﻿try
+﻿using System.Text.Json;
+
+try
 {
-    Point StartPoint = new Point(1, 1, 'E');
-    Point EndPoint = new Point(1, 1, 'E');
+    string fileName = "data.json";
+    string jsonString = File.ReadAllText(fileName);
+    Source? source = JsonSerializer.Deserialize<Source>(jsonString);
+
+    if (source is not null)
+    {
+
+        Point StartPoint = new Point(source.point1!.x, source.point1!.y, source.point1!.direction);
+        Point EndPoint = new Point(source.point2!.x, source.point2!.y, source.point2!.direction);
+
+        addSteps(source.commands, StartPoint);
 
 
-    string input = "RFRFRFRF";
-
-
-    addSteps(input, StartPoint);
-
-
-    Console.WriteLine(StartPoint.x + " " + StartPoint.y + " " + StartPoint.direction);
-    Console.WriteLine(EndPoint.x + " " + EndPoint.y + " " + EndPoint.direction);
-    Console.WriteLine(checkRoute(StartPoint, EndPoint));
+        Console.WriteLine(StartPoint.x + " " + StartPoint.y + " " + StartPoint.Direction);
+        Console.WriteLine(EndPoint.x + " " + EndPoint.y + " " + EndPoint.Direction);
+        Console.WriteLine(checkRoute(StartPoint, EndPoint));
+    }
 
 }
 catch (CustomException ex)
@@ -21,20 +27,20 @@ catch (CustomException ex)
 }
 
 
-static bool checkRoute(Point Start, Point End)
+bool checkRoute(Point Start, Point End)
 {
-    return Start.x == End.x && Start.y == End.y && Start.direction == End.direction;
+    return Start.x == End.x && Start.y == End.y && Start.Direction == End.Direction;
 }
 
-static void addSteps(string steps, Point StartPoint)
+void addSteps(string? steps, Point StartPoint)
 {
 
-    for (int i = 0; i < steps.Length; i++)
+    for (int i = 0; i < steps!.Length; i++)
     {
-        StartPoint.direction = changeDirection(steps[i], StartPoint.direction);
+        StartPoint.Direction = changeDirection(steps[i], StartPoint.Direction);
         if (Char.ToLower(steps[i]) == 'f')
         {
-            switch (StartPoint.direction)
+            switch (StartPoint.Direction)
             {
                 case Direction.North:
                     StartPoint.y++;
