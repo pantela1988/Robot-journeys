@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "xROfxbWhcz5udflU/Xt4J3zKV7LBV2SCK9s/eRAMBSCQWnyOjMorHAkxMAmd2c/5qGL4z+m8i5oIj35mCEVevg==",
+  "dgSpecHash": "274a2pl+7xdqXUWxzM9F5sxdOXeXbFoQbKJnhut/fSz4jHd7h9nPjcqqFCttL/B9FfmcdPV2Erq84jtcmOCUuA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Dzo\\Desktop\\Robot-journeys\\Project.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Dzo\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
+    "C:\\Users\\Dzo\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

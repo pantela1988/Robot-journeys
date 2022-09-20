@@ -1,13 +1,42 @@
-{
-    "point1": {
-        "x": 1,
-        "y": 1,
-        "direction": "E"
+[
+    {
+        "point1": {
+            "x": 1,
+            "y": 1,
+            "direction": "E"
+        },
+        "point2": {
+            "x": 1,
+            "y": 1,
+            "direction": "E"
+        },
+        "commands": "rfrfrfrf"
     },
-    "point": {
-        "x": 1,
-        "y": 1,
-        "direction": "E"
-    },
-    "commands": "rfrfrfrf"
-}
+    {
+        "point1": {
+            "x": 3,
+            "y": 2,
+            "direction": "N"
+        },
+        "point2": {
+            "x": 3,
+            "y": 3,
+            "direction": "N"
+        },
+        "commands": "frrfllffrrfll" 
+
+    }, {
+        "point1": {
+            "x": 0,
+            "y": 3,
+            "direction": "W"
+        },
+        "point2": {
+            "x": 2,
+            "y": 4,
+            "direction": "S"
+        },
+        "commands": "llffflflfl"
+
+    }
+]

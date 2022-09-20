@@ -4,20 +4,23 @@ try
 {
     string fileName = "data.json";
     string jsonString = File.ReadAllText(fileName);
-    Source? source = JsonSerializer.Deserialize<Source>(jsonString);
+    List<Source>? source = JsonSerializer.Deserialize<List<Source>>(jsonString);
 
     if (source is not null)
     {
+        foreach (var item in source)
+        {
+            Point StartPoint = new Point(item.point1!.x, item.point1!.y, item.point1!.direction);
+            Point EndPoint = new Point(item.point2!.x, item.point2!.y, item.point2!.direction);
+            
+            Console.WriteLine($"({StartPoint.x},{StartPoint.y}) {StartPoint.Direction}");
 
-        Point StartPoint = new Point(source.point1!.x, source.point1!.y, source.point1!.direction);
-        Point EndPoint = new Point(source.point2!.x, source.point2!.y, source.point2!.direction);
-
-        addSteps(source.commands, StartPoint);
+            addSteps(item.commands, StartPoint);
 
 
-        Console.WriteLine(StartPoint.x + " " + StartPoint.y + " " + StartPoint.Direction);
-        Console.WriteLine(EndPoint.x + " " + EndPoint.y + " " + EndPoint.Direction);
-        Console.WriteLine(checkRoute(StartPoint, EndPoint));
+            
+            Console.WriteLine(checkRoute(StartPoint, EndPoint));
+        }
     }
 
 }
@@ -55,7 +58,11 @@ void addSteps(string? steps, Point StartPoint)
                     StartPoint.x--;
                     break;
             }
+            
         }
+        int x = StartPoint.x > 0 ? StartPoint.x : 0;
+            int y = StartPoint.y > 0 ? StartPoint.y : 0;
+            Console.WriteLine($"({x},{y}) {StartPoint.Direction}");
     }
 }
 
